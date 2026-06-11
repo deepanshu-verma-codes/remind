@@ -38,7 +38,7 @@ frontend/dist/
 Thumbs.db
 
 # Documentation
-INTERVIEW_PREP.md
+docs/
 
 # Misc
 .cache/

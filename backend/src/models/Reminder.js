@@ -13,6 +13,7 @@ const reminderSchema = new mongoose.Schema(
     },
     jobId: { type: String }, // To store the Bull job ID for reference
     retryCount: { type: Number, default: 0 },
+    isRead: { type: Boolean, default: false },
   },
   { timestamps: true },
 );

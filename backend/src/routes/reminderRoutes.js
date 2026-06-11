@@ -7,10 +7,14 @@ const {
   updateReminder,
   deleteReminder,
   getAllReminders,
+  markAsRead,
 } = require("../controllers/reminderController");
 
 // Create a new reminder
 router.post("/", createReminder);
+
+// Mark as read
+router.patch("/:id/read", markAsRead);
 
 // Get all reminders for the authenticated user
 router.get("/all", getAllReminders);

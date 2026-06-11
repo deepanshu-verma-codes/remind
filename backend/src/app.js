@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const reminderRoutes = require("./routes/reminderRoutes");
+const authRoutes = require("./routes/authRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 
 const app = express();
@@ -11,6 +13,8 @@ app.use((req, res, next) => {
 });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api/reminders", reminderRoutes);
 
 module.exports = app;
